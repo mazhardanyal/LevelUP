@@ -43,15 +43,23 @@ import { ArrowRight } from "lucide-react";
       Modern education with discipline, creativity and real-world skills for future leaders.
     </p>
 
-    <div className="mt-8 flex gap-4">
-      <Link to="/gallery" className="bg-orange-400 text-black px-6 py-3 rounded-full font-medium">
-        Explore School
-      </Link>
+   <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:justify-center">
 
-      <Link to="/gallery" className="border border-white px-6 py-3 rounded-full">
-        Watch Video
-      </Link>
-    </div>
+  <Link
+    to="/gallery"
+    className="bg-orange-400 text-black px-6 py-3 rounded-full font-medium text-center w-full sm:w-auto hover:scale-105 transition"
+  >
+    Explore School
+  </Link>
+
+  <Link
+    to="/gallery"
+    className="border border-white text-white px-6 py-3 rounded-full text-center w-full sm:w-auto hover:bg-white hover:text-[#0b1d39] transition"
+  >
+    Watch Video
+  </Link>
+
+</div>
 
   </div>
 

@@ -120,7 +120,7 @@ const Navbar = () => {
   <Link to="/gallery" className="block font-medium">Gallery</Link>
   <Link to="/contact" className="block font-medium">Contact</Link>
 
-  <Link to="/contact" className="w-full bg-orange-400 text-white py-2 rounded-full mt-4">
+  <Link to="/contact" className="border border-[#0b1d39] text-[#0b1d39] px-6 py-2 rounded-full text-center hover:bg-[#0b1d39] hover:text-white transition">
     Apply Now
   </Link>
 
