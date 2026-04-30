@@ -1,5 +1,5 @@
 import React from "react";
-
+import Reveal from "../components/Reveal";
 const Gallery = () => {
   const images = [
     "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
@@ -12,7 +12,7 @@ const Gallery = () => {
 
   return (
     <div className="bg-white">
-
+<Reveal>
       {/* HERO */}
       <section className="bg-[#0b1d39] py-24 text-center text-white">
 
@@ -31,8 +31,10 @@ const Gallery = () => {
         </p>
 
       </section>
-
+</Reveal>
       {/* FEATURE STRIP */}
+     
+     <Reveal>
       <section className="max-w-6xl mx-auto px-6 md:px-10 py-16">
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -68,8 +70,13 @@ const Gallery = () => {
         </div>
 
       </section>
-
-      {/* VIDEO SECTION (NEW ADDITION 🔥) */}
+</Reveal>
+      {/*
+     
+     
+     VIDEO SECTION (NEW ADDITION 🔥) */}
+     
+     <Reveal>
       <section className="bg-[#0b1d39] py-20 text-white">
 
         <div className="max-w-6xl mx-auto px-6 md:px-10 text-center">
@@ -103,7 +110,10 @@ const Gallery = () => {
         </div>
 
       </section>
+</Reveal>
 
+
+<Reveal>
       {/* IMAGE GRID */}
       <section className="max-w-6xl mx-auto px-6 md:px-10 py-20">
 
@@ -139,7 +149,7 @@ const Gallery = () => {
         </div>
 
       </section>
-
+</Reveal>
     </div>
   );
 };

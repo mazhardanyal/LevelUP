@@ -1,6 +1,7 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Sparkles, ChevronRight } from "lucide-react";
+import Reveal from "../components/Reveal";
 const Programs = () => {
   const programs = [
     {
@@ -19,7 +20,7 @@ const Programs = () => {
 
   return (
     <div className="bg-white">
-
+<Reveal>
       {/* HERO */}
       <section className="bg-[#0b1d39] py-28 text-center text-white">
 
@@ -39,7 +40,9 @@ const Programs = () => {
         </p>
 
       </section>
+</Reveal>
 
+<Reveal>
       {/* STATS SECTION (MAKES PAGE BIGGER + TRUST) */}
       <section className="max-w-6xl mx-auto px-6 md:px-10 py-16 grid md:grid-cols-3 gap-8 text-center">
 
@@ -59,7 +62,9 @@ const Programs = () => {
         </div>
 
       </section>
+</Reveal>
 
+<Reveal>
       {/* OVERVIEW SECTION */}
       <section className="max-w-6xl mx-auto px-6 md:px-10 py-20">
 
@@ -100,46 +105,211 @@ const Programs = () => {
         </div>
 
       </section>
+</Reveal>
+<Reveal>
+<section className="relative px-6 md:px-10 py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 overflow-hidden">
 
-      {/* PROGRAM CARDS */}
-      <section className="max-w-6xl mx-auto px-6 md:px-10 py-10">
+  {/* Background decorative elements */}
+  <div className="absolute top-0 right-0 w-80 h-80 bg-orange-400/5 rounded-full blur-3xl" />
+  <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/5 rounded-full blur-3xl" />
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-400/5 rounded-full blur-3xl" />
 
-        <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">
-          Academic Levels
-        </h2>
+  {/* TITLE SECTION */}
+  <div className="text-center mb-16 relative z-10">
+    <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-orange-50 rounded-full mb-4">
+      <Sparkles className="w-4 h-4 text-orange-500" />
+      <span className="text-orange-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">
+        Our Programs
+      </span>
+    </div>
+    
+    <h2 className="text-4xl sm:text-5xl font-bold">
+      <span className="bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">
+        Academic Levels
+      </span>
+    </h2>
+    
+    <div className="flex items-center justify-center gap-2 mt-4 mb-4">
+      <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full" />
+      <div className="w-2 h-1 bg-orange-300 rounded-full" />
+      <div className="w-1 h-1 bg-orange-200 rounded-full" />
+    </div>
+    
+    <p className="text-gray-500 max-w-md mx-auto">
+      Education from foundation to grade 7
+    </p>
+  </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+  {/* GRID */}
+  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-10">
 
-          {programs.map((item, i) => (
-            <div
-              key={i}
-              className="relative bg-white rounded-2xl p-8 shadow-md border hover:shadow-2xl transition"
-            >
+    {/* CARD 1 - Nursery */}
+    <div className="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden hover:-translate-y-2">
+      
+      {/* Gradient background on hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-orange-50/0 group-hover:from-blue-50/30 group-hover:to-orange-50/30 transition-all duration-500" />
+      
+      {/* Icon section */}
+      <div className="relative pt-8 px-7">
+        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+          <span className="text-3xl">🎓</span>
+        </div>
+      </div>
 
-              <div className="w-3 h-3 bg-orange-400 rounded-full mb-4"></div>
+      {/* Content */}
+      <div className="p-7 pt-0">
+        <h3 className="text-xl font-bold text-blue-900 group-hover:text-orange-500 transition-colors duration-300">
+          Nursery
+        </h3>
 
-              <h3 className="text-2xl font-bold text-blue-900">
-                {item.title}
-              </h3>
+        <p className="text-gray-600 text-sm mt-3 leading-relaxed">
+          Early childhood learning with focus on basic skills and activities. 
+          Play-based curriculum for holistic development.
+        </p>
 
-              <p className="text-gray-600 mt-4 leading-relaxed">
-                {item.desc}
-              </p>
-
-              <a
-                href="/programs"
-                className="inline-flex items-center gap-2 mt-6 text-orange-500 font-medium hover:gap-3 transition"
-              >
-                Explore <ArrowRight size={18} />
-              </a>
-
-            </div>
-          ))}
-
+        {/* Features list */}
+        <div className="mt-4 space-y-2">
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="w-1 h-1 bg-orange-400 rounded-full" />
+            <span>Age: 3-4 years</span>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="w-1 h-1 bg-orange-400 rounded-full" />
+            <span>Duration: Full day</span>
+          </div>
         </div>
 
-      </section>
+        <a
+          href="/programs"
+          className="inline-flex items-center gap-2 mt-5 text-orange-500 font-medium text-sm group-hover:gap-3 transition-all duration-300 hover:text-orange-600"
+        >
+          Learn More 
+          <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        </a>
+      </div>
 
+      {/* Decorative corner */}
+      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-orange-400/10 to-transparent rounded-bl-2xl" />
+    </div>
+
+    {/* CARD 2 - Primary (Featured Card) */}
+    <div className="group relative bg-gradient-to-br from-white to-blue-50/30 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-blue-100 overflow-hidden hover:-translate-y-2 ring-1 ring-orange-200/50">
+      
+      {/* Featured badge */}
+      <div className="absolute top-4 right-4 z-20">
+       
+      </div>
+
+      {/* Gradient background on hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-orange-50/0 group-hover:from-blue-50/50 group-hover:to-orange-50/50 transition-all duration-500" />
+      
+      {/* Icon section */}
+      <div className="relative pt-8 px-7">
+        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-100 to-yellow-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md">
+          <span className="text-3xl">📚</span>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-7 pt-0">
+        <h3 className="text-xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">
+          Primary (Class 1–5)
+        </h3>
+
+        <p className="text-gray-600 text-sm mt-3 leading-relaxed">
+          Strong foundation in English, Math, Science and basic life skills. 
+          Interactive learning with modern teaching methods.
+        </p>
+
+        {/* Features list */}
+        <div className="mt-4 space-y-2">
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="w-1 h-1 bg-orange-400 rounded-full" />
+            <span>Age: 5-10 years</span>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="w-1 h-1 bg-orange-400 rounded-full" />
+            <span>Smart classrooms</span>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="w-1 h-1 bg-orange-400 rounded-full" />
+            <span>STEM focused</span>
+          </div>
+        </div>
+
+        <a
+          href="/programs"
+          className="inline-flex items-center gap-2 mt-5 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-medium text-sm px-5 py-2 rounded-full hover:shadow-lg transition-all duration-300 group-hover:gap-3"
+        >
+          Learn More 
+          <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        </a>
+      </div>
+
+      {/* Decorative corner */}
+      <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-orange-400/5 to-transparent rounded-tr-2xl" />
+    </div>
+
+    {/* CARD 3 - Middle School */}
+    <div className="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden hover:-translate-y-2">
+      
+      {/* Gradient background on hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-orange-50/0 group-hover:from-blue-50/30 group-hover:to-orange-50/30 transition-all duration-500" />
+      
+      {/* Icon section */}
+      <div className="relative pt-8 px-7">
+        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+          <span className="text-3xl">🚀</span>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-7 pt-0">
+        <h3 className="text-xl font-bold text-blue-900 group-hover:text-orange-500 transition-colors duration-300">
+          Middle School (Class 6–7)
+        </h3>
+
+        <p className="text-gray-600 text-sm mt-3 leading-relaxed">
+          Advanced learning preparing students for higher education levels. 
+          Critical thinking and practical application focus.
+        </p>
+
+        {/* Features list */}
+        <div className="mt-4 space-y-2">
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="w-1 h-1 bg-orange-400 rounded-full" />
+            <span>Age: 11-13 years</span>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="w-1 h-1 bg-orange-400 rounded-full" />
+            <span>Career counseling</span>
+          </div>
+        </div>
+
+        <a
+          href="/programs"
+          className="inline-flex items-center gap-2 mt-5 text-orange-500 font-medium text-sm group-hover:gap-3 transition-all duration-300 hover:text-orange-600"
+        >
+          Learn More 
+          <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        </a>
+      </div>
+
+      {/* Decorative corner */}
+      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-orange-400/10 to-transparent rounded-bl-2xl" />
+    </div>
+
+  </div>
+
+
+
+  {/* Bottom decorative element */}
+  <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-blue-50/20 to-transparent pointer-events-none" />
+
+</section>
+</Reveal>
+
+<Reveal>
       {/* WHY CHOOSE US (MAKES PAGE BIGGER) */}
       <section className="bg-gray-50 py-20 mt-20">
 
@@ -168,8 +338,11 @@ const Programs = () => {
         </div>
 
       </section>
+</Reveal>
 
-      {/* CTA */}
+
+
+<Reveal>      {/* CTA */}
 <section className="bg-orange-400 py-16 md:py-20 text-center text-white px-6">
 
   <h2 className="text-2xl md:text-3xl font-bold leading-tight">
@@ -190,6 +363,7 @@ const Programs = () => {
   </div>
 
 </section>
+</Reveal>
     </div>
   );
 };
